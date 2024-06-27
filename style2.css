@@ -146,12 +146,11 @@ footer {/*rodape*/
 }
 
 .pdf-container {
-    width: 150%; /* Aumentar a largura para 90% */
-    max-width: 1400px; /* Definir um limite máximo de largura */
-    height: 600px; /* Aumentar a altura */
-    position: relative;
-    border: 1px solid #ccc;
-    margin: 20px auto; /* Centralizar o contêiner */
+    max-width: 800px; /* Define a largura máxima desejada */
+    margin: 0 auto; /* Centraliza a div horizontalmente na página */
+    padding: 20px; /* Adiciona um espaçamento interno */
+    border: 1px solid #ccc; /* Adiciona uma borda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
 }
 
 .pdf-container iframe {
