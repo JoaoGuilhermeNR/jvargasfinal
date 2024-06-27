@@ -115,13 +115,13 @@
     <section>
         <h2>Nossas lojas</h2>
         <div class="grid-container">
-                <div id="servicos"class="card">
-                    <a href="https://www.google.com/maps/dir/-27.5972096,-48.6473728/s%C3%A3o+jo%C3%A3o+batista+jvargas/@-27.609686,-48.6559596,14.21z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94df590c616eb48d:0xda14fddbc3a01c40!2m2!1d-48.8977021!2d-27.3686885?entry=ttu" target="_blank">
-                        <img src="loja01.jpg" alt="Loja 01">
-                    </a>
-                    <h3>São João Batista</h3>
-                    <p>SC-408, n° 1113 - Tijipió, São João Batista - SC, 88240-000.</p>
-                </div>
+            <div id="servicos" class="card">
+                <a href="https://www.google.com/maps/dir/-27.5972096,-48.6473728/s%C3%A3o+jo%C3%A3o+batista+jvargas/@-27.609686,-48.6559596,14.21z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94df590c616eb48d:0xda14fddbc3a01c40!2m2!1d-48.8977021!2d-27.3686885?entry=ttu" target="_blank">
+                    <img src="loja01.jpg" alt="Loja 01">
+                </a>
+                <h3>São João Batista</h3>
+                <p>SC-408, n° 1113 - Tijipió, São João Batista - SC, 88240-000.</p>
+            </div>
             <div class="card">
                 <a href="https://www.google.com/maps/dir//R.+Ver.+Arthur+Manoel+Mariano,+1175+-+Forquilhinhas,+S%C3%A3o+Jos%C3%A9+-+SC,+88106-501/@-27.5116894,-48.6910004,13.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95274b51294549cd:0x927f7d093052c541!2m2!1d-48.642583!2d-27.5989363?entry=ttu" target="_blank">
                     <img src="loja02.jpg" alt="Loja 02">
@@ -143,15 +143,14 @@
         <div class="grid-container">
             <div id="Encarte">
                 <h3></h3>
-                <div class="pdf-container">
-                    <iframe src="encarte.pdf" frameborder="0"></iframe>
-                </div>
+                <div id="pdf-viewer" class="pdf-container"></div>
+            </div>
         </div>
     </section>
 
     <section class="contat">
         <div id="contato" class="contat_redes">
-            <h3>Midias Sociais</h3>
+            <h3>Mídias Sociais</h3>
             <p><a href="https://www.facebook.com/Jvargassupermercados/" target="_blank"><i class='bx bxl-facebook'></i></a> Facebook</p>
             <p><a href="https://whts.me/7c23" target="_blank"><i class='bx bxl-whatsapp'></i></a> Whatsapp</p>
             <p><a href="https://www.instagram.com/jvargasoficial" target="_blank"><i class='bx bxl-instagram'></i></a> Instagram</p>
@@ -161,8 +160,6 @@
             <p>(48) 3265-7660 - São João Batista</p><br>
             <p>(48) 3259-4432 - Forquilhinhas</p><br>
             <p>(48) 3259-4004 - Forquilhas</p><br>
-            <!--p><a href="mailto:jvargas@jvargasnet.com.br">jvargas@jvargasnet.com.br</a></p><br-->
-            <!--p><a href="https://whts.me/7c23"><i class='bx bxl-whatsapp'></i></a> <a href="https://whts.me/7c23">Whatsapp</a></p-->
         </div>
     </section>
 
@@ -172,7 +169,7 @@
 
     <script src="script.js"></script>
     <script src="scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
     <script>
         function toggleMenu() {
@@ -181,6 +178,20 @@
             menu.classList.toggle('active');
             hamburger.classList.toggle('active');
         }
+
+        // Embed the PDF using PDFObject
+        document.addEventListener("DOMContentLoaded", function() {
+            var pdfUrl = "encarte.pdf";
+            var options = {
+                width: "100%",
+                height: "600px",
+                pdfOpenParams: {
+                    view: "FitH",
+                    pagemode: "none"
+                }
+            };
+            PDFObject.embed(pdfUrl, "#pdf-viewer", options);
+        });
     </script>
 </body>
 

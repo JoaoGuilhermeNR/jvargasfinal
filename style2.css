@@ -146,31 +146,11 @@ footer {/*rodape*/
 }
 
 .pdf-container {
-    width: 150%; /* Aumentar a largura para 90% */
-    max-width: 1400px; /* Definir um limite máximo de largura */
-    height: 600px; /* Aumentar a altura */
+    width: 100%;
+    height: 600px;
     position: relative;
     border: 1px solid #ccc;
-    margin: 20px auto; /* Centralizar o contêiner */
+    margin: 20px auto;
+    max-width: 100%;
 }
 
-.pdf-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-@media (max-width: 1200px) {
-    .pdf-container {
-        max-width: 1000px; /* Ajustar a largura máxima para telas menores */
-        padding-bottom: 100%; /* Aspect ratio 1:1 para telas menores */
-    }
-}
-
-@media (max-width: 768px) {
-    .pdf-container {
-        width: 95%; /* Ajustar a largura para dispositivos menores */
-        height: 400px; /* Ajustar a altura para dispositivos menores */
-        padding-bottom: 120%; /* Aspect ratio maior para telas muito pequenas */
-    }
-}
