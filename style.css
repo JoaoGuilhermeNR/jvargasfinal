@@ -1,0 +1,511 @@
+/* Reset e configurações globais */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:white;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: large;
+  color: white; /* cor padrão do texto */
+}
+
+/* Estilos específicos */
+.Eu {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  color: #fff;
+}
+
+.Eu h3 {
+  color: whitesmoke;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.Eu h1 {
+  color: rgb(255, 69, 0);
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
+.Eu h2 {
+  color: orangered;
+  font-size: 25px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 5px solid orangered;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    background: url("backgroundcelular.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* Estilo da barra de rolagem */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #ff4500 #ffffff;
+}
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff4500;
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
+
+/* Estilo do cabeçalho */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  height: 12vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  background-color: white;
+  transition: background-color 0.5s ease;
+  border-bottom: 5px solid orangered; /* barra laranja na parte inferior */
+
+}
+
+header.scrolled {
+  background-color: rgba(252, 252, 252, 1.8);
+  color: #050505;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px; /* Ajuste a altura conforme necessário */
+  width: auto;
+  /* Adicione estas linhas se necessário para ajustar a posição */
+  margin-right: 20px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  position: relative;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: orangered;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.navigation a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: white;
+  font-weight: 500;
+  transition: 0.5s;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navigation .btnLogin-popup:hover {
+  background: orangered;
+  color: #162938;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.hamburger-menu .bar {
+  width: 100%;
+  height: 3px;
+  background-color: orangered;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+      padding: 20px;
+  }
+
+  .logo {
+      display: none;
+  }
+
+  .navigation {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      background: rgba(252, 252, 252, 1.8);
+      text-align: center;
+  }
+
+  .navigation.active {
+      display: flex;
+  }
+
+  .navigation.active a {
+      color: black;
+      margin: 10px 0;
+  }
+
+  .navigation.active .btnLogin-popup {
+      background: transparent;
+      border: 2px solid black;
+      color: black;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+
+  .hamburger-menu.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger-menu.active .bar:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+  }
+
+  .hamburger-menu.active .bar:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+  }
+
+  .Eu {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .botao-box {
+      display: flex;
+      flex-direction: column;
+  }
+}
+
+/* Estilo do popup */
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+  height: 520px;
+}
+
+.wrapper .form-box {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .form-box.login {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+  transition: transform 0.18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  font-size: 2em;
+  color: orangered;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.form-box h2 {
+  font-size: 2em;
+  color: orangered;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid orangered;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: orangered;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: orangered;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: orangered;
+  line-height: 57px;
+}
+
+.remember-forgot {
+  font-size: 0.9em;
+  color: orangered;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remember-forgot a {
+  color: orangered;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: orangered;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 0.9em;
+  color: orangered;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  color: orangered;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+.botao-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+
+.botao-box .botao {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 17rem;
+  height: 60%;
+  background: transparent;
+  border: 0.2rem solid orangered;
+  border-radius: 0.8rem;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  color: orangered;
+}
+
+.botao-box .botao:hover {
+  color: white;
+}
+
+.botao-box .botao:nth-child(2) {
+  background: transparent;
+  color: orangered;
+}
+
+.botao-box .botao:nth-child(2):hover {
+  color: white;
+}
+
+.botao-box .botao:nth-child(2)::before,
+.botao-box .botao::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: orangered;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.botao-box .botao:hover::before {
+  width: 100%;
+}
+
+.redes {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.redes a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: orangered;
+  border: 2px solid orangered;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.redes a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(252, 252, 252, 0.8);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.redes a:hover::before {
+  width: 100%;
+}

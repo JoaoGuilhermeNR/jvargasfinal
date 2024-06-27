@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JVargas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="content">
+        <header>
+            <h2 id="home" class="logo"><img src="LOGO_PLACA.png" alt="JVargas Supermercados" /></h2>
+            <nav class="navigation">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#sobre" class="nav-link">Ofertas</a>
+                <a href="#servicos" class="nav-link">Endereço</a>
+                <a href="#contato" class="nav-link">Contato</a>
+                <button class="btnLogin-popup">Login</button>
+            </nav>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </header>
+
+        <div class="wrapper">
+            <span class="icon-close">
+                <ion-icon name="close"></ion-icon>
+            </span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Salvar Login</label>
+                        <a href="#">Esqueceu a senha?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Não tem uma conta? <a href="#" class="register-link">Registrar</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box register">
+                <h2>Registro</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person"></ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label>Usuário</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed"></ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Aceito termos e condições</label>
+                    </div>
+                    <button type="submit" class="btn">Registrar</button>
+                    <div class="login-register">
+                        <p>Já possui uma conta? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="Eu">
+            <!--<h1> Personal Trainer</h1>-->
+            <!--Fernanda Ingles</h2><br>
+            <div class="botao-box">          Macumba da braba isso aqui
+                <a href="#" class="botao"> Treinamentos </a>
+                <a href="#servicos" class="botao"> + Informações</a>
+            </div> -->
+        </div>
+
+        <div class="redes">
+            <a href="https://www.facebook.com/Jvargassupermercados/" target="_blank"><i class='bx bxl-facebook'></i></a>
+            <a href="https://whts.me/7c23" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://www.instagram.com/jvargasoficial/"target="_blank"><i class='bx bxl-instagram'></i></a>
+        </div>
+    </div>
+
+    <section>
+        <h2>Nossas lojas</h2>
+        <div class="grid-container">
+                <div id="servicos"class="card">
+                    <a href="https://www.google.com/maps/dir/-27.5972096,-48.6473728/s%C3%A3o+jo%C3%A3o+batista+jvargas/@-27.609686,-48.6559596,14.21z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x94df590c616eb48d:0xda14fddbc3a01c40!2m2!1d-48.8977021!2d-27.3686885?entry=ttu" target="_blank">
+                        <img src="loja01.jpg" alt="Loja 01">
+                    </a>
+                    <h3>São João Batista</h3>
+                    <p>Endereço: SC-408, n° 1113 - Tijipió, São João Batista - SC, 88240-000.</p>
+                </div>
+            <div class="card">
+                <a href="https://www.google.com/maps/dir//R.+Ver.+Arthur+Manoel+Mariano,+1175+-+Forquilhinhas,+S%C3%A3o+Jos%C3%A9+-+SC,+88106-501/@-27.5116894,-48.6910004,13.5z/data=!4m8!4m7!1m0!1m5!1m1!1s0x95274b51294549cd:0x927f7d093052c541!2m2!1d-48.642583!2d-27.5989363?entry=ttu" target="_blank">
+                    <img src="loja02.jpg" alt="Loja 02">
+                </a>
+                <h3>Forquilhinhas</h3>
+                <p>R. Ver. Arthur Manoel Mariano, 1175 - Forquilhinhas, São José - SC, 88106-50.</p>
+            </div>
+            <div class="card">
+                <a href="https://www.google.com/maps/dir/-27.5902592,-48.6288651/jvargas+forquilhas/@-27.5777868,-48.67124,18.25z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x95274b0008c729af:0x6a2fdc75b1cbf438!2m2!1d-48.6706969!2d-27.5772726?entry=ttu" target="_blank">
+                    <img src="loja03.jpg" alt="Loja 03">
+                </a>
+                <h3>Forquilhas</h3>
+                <p>R. José Bartolomeu Vieira, 32 - ForquilhasSão José - SC, 88107-388.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 id="sobre">Ofertas da semana</h2>
+        <div class="grid-container">
+            <div id="Encarte">
+                <h3></h3>
+                <div class="pdf-container">
+                    <iframe src="encarte.pdf" frameborder="0"></iframe>
+                </div>
+        </div>
+    </section>
+
+    <section class="contat">
+        <div id="contato" class="contat_redes">
+            <h3>Midias Sociais</h3>
+            <p><a href="https://www.facebook.com/Jvargassupermercados/" target="_blank"><i class='bx bxl-facebook'></i></a> Facebook</p>
+            <p><a href="https://whts.me/7c23" target="_blank"><i class='bx bxl-whatsapp'></i></a> Whatsapp</p>
+            <p><a href="https://www.instagram.com/jvargasoficial" target="_blank"><i class='bx bxl-instagram'></i></a> Instagram</p>
+        </div>
+        <div>
+            <h3>Entre em contato</h3><br>
+            <p>(48) 3265-7660 - São João Batista</p><br>
+            <p>(48) 3259-4432 - Forquilhinhas</p><br>
+            <p>(48) 3259-4004 - Forquilhas</p><br>
+            <!--p><a href="mailto:jvargas@jvargasnet.com.br">jvargas@jvargasnet.com.br</a></p><br-->
+            <!--p><a href="https://whts.me/7c23"><i class='bx bxl-whatsapp'></i></a> <a href="https://whts.me/7c23">Whatsapp</a></p-->
+        </div>
+    </section>
+
+    <footer id="sobre">
+        <p>Desenvolvido por <b><a href="https://github.com/JoaoGuilhermeNR" target="_blank">João Guilherme </a></b>©2024</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="scroll.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.navigation');
+            const hamburger = document.querySelector('.hamburger-menu');
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
