@@ -146,7 +146,7 @@ footer {/*rodape*/
 }
 
 .pdf-container {
-    width: 150%; /* Aumentar a largura para 90% */
+    width: 100%; /* Aumentar a largura para 90% */
     max-width: 1400px; /* Definir um limite máximo de largura */
     height: 600px; /* Aumentar a altura */
     position: relative;
