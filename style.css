@@ -49,7 +49,7 @@ body {
   background-position: center;
   border-bottom: 5px solid orangered;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .content {
     background: url("backgroundcelular.png") no-repeat;
     background-size: cover;
