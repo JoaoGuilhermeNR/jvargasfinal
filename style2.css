@@ -165,7 +165,7 @@ footer {/*rodape*/
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 300px) {
     .pdf-container {
         width: 95%; /* Ajustar a largura para dispositivos menores */
         height: 400px; /* Ajustar a altura para dispositivos menores */
