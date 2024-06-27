@@ -83,4 +83,11 @@ document.addEventListener('DOMContentLoaded', function() {
       navigation.classList.toggle('active');
     });
   });
-  
+  function toggleMenu() {
+    const menu = document.querySelector('.navigation');
+    const hamburger = document.querySelector('.hamburger-menu');
+    const logo = document.querySelector('.hamburger-logo');
+    menu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    logo.classList.toggle('active');
+}

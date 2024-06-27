@@ -509,3 +509,18 @@ header.scrolled {
 .redes a:hover::before {
   width: 100%;
 }
+/* Esconde o logo por padrão */
+.logomobile img {
+  display: none;
+  align-items: auto;
+  
+}
+
+/* Mostra o logo quando a resolução for menor que 1200px */
+@media screen and (max-width: 1200px) {
+  .logomobile img {
+    display: block;
+    margin-left: 10px; /* Ajuste o espaço entre o ícone de hambúrguer e o logo */
+    height: 40px; /* Ajuste conforme necessário */
+  }
+}
