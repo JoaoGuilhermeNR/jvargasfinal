@@ -20,7 +20,7 @@
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#sobre" class="nav-link">Ofertas</a>
                 <a href="#servicos" class="nav-link">Endereço</a>
-                <a href="#contato" class="nav-link">Contato</a>
+                <a href="#contato" class="nav-link">Informações </a>
                 <button class="btnLogin-popup">Login</button>
             </nav>
             <div class="hamburger-menu" onclick="toggleMenu()">
@@ -33,7 +33,7 @@
               </div>
         </header>
 
-        <div class="wrapper">
+      <!---->  <div class="wrapper">
             <span class="icon-close">
                 <ion-icon name="close"></ion-icon>
             </span>
@@ -99,14 +99,6 @@
             </div>
         </div>
 
-        <div class="Eu">
-            <!--<h1> Personal Trainer</h1>-->
-            <!--Fernanda Ingles</h2><br>
-            <div class="botao-box">          Macumba da braba isso aqui
-                <a href="#" class="botao"> Treinamentos </a>
-                <a href="#servicos" class="botao"> + Informações</a>
-            </div> -->
-        </div>
 
         <div class="redes">
             <a href="https://www.facebook.com/Jvargassupermercados/" target="_blank"><i class='bx bxl-facebook'></i></a>
@@ -164,6 +156,14 @@
             <p>(48) 3259-4432 - Forquilhinhas</p><br>
             <p>(48) 3259-4004 - Forquilhas</p><br>
         </div>
+        <div>
+            <h3>Trabalhe conosco</h3><br>
+            <p>
+                <a href="https://forms.gle/v7FkH4Vw19zyV7Ve7" target="_blank">
+                    <i class='x-hugeicons-job-search'></i> Formulário de candidatura
+                </a>
+            </p>
+        </div>
     </section>
 
     <footer id="sobre">
@@ -181,20 +181,6 @@
             menu.classList.toggle('active');
             hamburger.classList.toggle('active');
         }
-
-        // Embed the PDF using PDFObject
-        document.addEventListener("DOMContentLoaded", function() {
-            var pdfUrl = "encarte.pdf";
-            var options = {
-                width: "100%",
-                height: "600px",
-                pdfOpenParams: {
-                    view: "FitH",
-                    pagemode: "none"
-                }
-            };
-            PDFObject.embed(pdfUrl, "#pdf-viewer", options);
-        });
     </script>
 </body>
 

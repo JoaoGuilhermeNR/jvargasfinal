@@ -145,29 +145,3 @@ footer {/*rodape*/
     }
 }
 
-.pdf-container {
-    max-width: 800px; /* Define a largura máxima desejada */
-    margin: 0 auto; /* Centraliza a div horizontalmente na página */
-    padding: 20px; /* Adiciona um espaçamento interno */
-    border: 1px solid #ccc; /* Adiciona uma borda */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
-}
-
-.pdf-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-@media (max-width: 1200px) {
-    .pdf-container {
-        max-width: 1000px; /* Ajustar a largura máxima para telas menores */
-    }
-}
-
-@media (max-width: 300px) {
-    .pdf-container {
-        width: 95%; /* Ajustar a largura para dispositivos menores */
-        height: 400px; /* Ajustar a altura para dispositivos menores */
-    }
-}
